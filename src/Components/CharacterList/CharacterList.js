@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 
-import "./CharacterList.css"
+import "./CharacterList.css";
+ import { Link } from "react-router-dom";
 
 //Component
 import CardComponent from "../CardComponent/CardComponent";
@@ -21,7 +22,9 @@ const CharacterList = () => {
       {characters.map((char) => {
         return(
           <div key={char.char_id}>
-            <CardComponent />
+            <Link to={`/Detail/${char.char_id}`}> 
+            <CardComponent data={char} />
+            </Link>
           </div>
         )
       })}

@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./Views/Home/Home";
 import About from "./Views/About/About";
 import Contact from "./Views/Contact/Contact";
+import CharacterDetail from './Views/CharacterDetail/CharacterDetail';
 
 //IMPORTANDO COMPONENTES
 import NavBar from './Components/NavBar/NavBar';
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/About" element={<About/>} />
         <Route path="/Contact" element={<Contact/>} />
+        <Route path='/Detail/:id' element={<CharacterDetail />} />
       </Routes>
     </div>
     </Router>
